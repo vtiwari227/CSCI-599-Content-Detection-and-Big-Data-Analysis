@@ -1,0 +1,1 @@
+{"array":{"parser_chain":"org.apache.tika.parser.DefaultParser->org.apache.tika.parser.pot.PooledTimeSeriesParser","Values":{"100-500":[111,29.015625,12.2734375],">500":[12,600.015625,234.2734375]}}}

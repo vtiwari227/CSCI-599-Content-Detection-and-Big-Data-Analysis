@@ -1,0 +1,1 @@
+{"array":{"parser_chain":"org.apache.tika.parser.DefaultParser->org.apache.tika.parser.mp3.Mp3Parser","Values":{"100-500":[31,16.015625,8.2734375],">500":[3,150.015625,97.2734375],"50-100":[22,12.015625,2.2734375]}}}

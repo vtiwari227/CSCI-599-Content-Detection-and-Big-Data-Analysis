@@ -1,0 +1,1 @@
+{"array":{"parser_chain":"org.apache.tika.parser.DefaultParser->org.apache.tika.parser.html.HtmlParser","Values":{"0-10":[194,42.23046875,12.2734375],"10-50":[175,53.451171875,19.2734375],"50-100":[22,63.568359375,39.2734375]}}}

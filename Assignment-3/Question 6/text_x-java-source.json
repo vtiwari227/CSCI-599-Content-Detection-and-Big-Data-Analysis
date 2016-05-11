@@ -1,0 +1,1 @@
+{"array":{"parser_chain":"org.apache.tika.parser.DefaultParser->org.apache.tika.parser.code.SourceCodeParser","Values":{"0-10":[15,16.87109375,1.0234375],"10-50":[29,25.697265625,1.0234375]}}}
