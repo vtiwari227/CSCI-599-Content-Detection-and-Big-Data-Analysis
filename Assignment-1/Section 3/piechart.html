@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="d3.v3.min.js"></script>
+    <title>Piechart</title>
+<style>
+    #chart{
+    margin:0;
+    padding:10px 10px 10px 10px;
+    width="80%";
+    }
+     #container{
+    margin:0;
+    align:center;
+    }
+    #detail{
+    margin:0;
+    float:left;
+    padding:10px 10px 10px 10px;
+    width="20%";
+    }
+
+
+path {
+  transition: fill 250ms linear;
+  transition-delay: 150ms;
+}
+
+path:hover {
+  transition-delay: 0;
+}
+</style>
+    <script>
+	
+	/*  Note Cross Scripting Issue :: Chrome\All Other browsers usage
+	open cmd:
+	>cd  C:\Users\Snehal\Google Drive\Homework 1
+	C:\Users\Snehal\Google Drive\Homework 1>C:\Python27\python -m SimpleHTTPServer 
+	
+	usage as http://localhost:8000/output.json
+	access with	http://localhost:8000/pieChart.html
+	
+	*/
+        d3.json("output.json",function (error , data){
+        
+//check JSON Data
+        var txt='<table width="200px" align="center" border="1"><tr><th>Mime Types</th><th> No of records</th></tr>';
+        for(var i=0;i<data.length;i++)
+        txt+='<tr><td>'+data[i].mimeType+"</td><td>"+data[i].value+"</td></tr>"
+
+        txt+='</table>'
+// displaying table
+        d3.select('#detail').html(txt);
+
+
+var r=300;
+var color = d3.scale.category20();
+var width=800,height=800;
+
+var vis = d3.select('#chart').append("svg:svg").data([data]).attr("width",width).attr("height", height)
+         .append("svg:g").attr("transform", "translate(" + width/2 + "," + height/2 + ")");
+
+var pie = d3.layout.pie().value(function(d,i){return Math.pow(d.value,1/2);}).padAngle(.00002);
+
+// declare an arc generator function
+var arc = d3.svg.arc().outerRadius(r).innerRadius(r*0.50).padRadius(r*0.6);
+
+// select paths, use arc generator to draw
+var arcs = vis.selectAll("g.slice").data(pie).enter().append("svg:g").attr("class", "slice");
+arcs.append("svg:path")
+    .attr("fill", function(d, i){ return color(i);}).style('opacity', 0.8)
+    .attr("d", function (d) {
+        // log the result of the arc generator to show how cool it is :)
+        console.log(arc(d));
+        return arc(d);
+    }).on("mouseover", animatePieIn)
+      .on("mouseout",animatePieOut)
+	  .attr("text","")
+	  ;
+
+// add the text
+arcs.append("svg:text").attr("transform", function(d){
+			d.innerRadius = r;
+			d.outerRadius = r;
+    return "translate(" + arc.centroid(d) + ")";}).attr("text-anchor", (100*Math.Random()))
+    .attr("dy", ".35em").style('opacity', 0.8)
+    .text( function(d, i) {
+    return data[i].mimeType//+'{'+data[i].value+'}'
+            ;})
+		.on("mouseover", animateFirstStep(this))
+      .on("mouseout",animateSecondStep(this))
+      .attr("value", function(d, i) {
+    return '{'+data[i].value+'}'
+            ;})
+    .attr("mimeType", function(d, i) {
+    return '{'+data[i].mimeType+'}'
+            ;}).style("display","inline")
+                  ;
+function animatePieIn(){
+ arc.outerRadius(300*1.1);
+		arc.innerRadius(300*0.5);
+    d3.select(this)
+      .transition()
+      .attr("d",arc).style('opacity', 1);
+
+		 var svgElement = this.nextSibling
+         animateFirstStep(svgElement);
+		
+}
+function animatePieOut(){
+arc.outerRadius(300*1);
+	arc.innerRadius(300*0.5);
+    d3.select(this)
+      .transition()
+      .attr("d",arc).style('opacity', 0.8)
+	 	 ;
+		  var svgElement = this.nextSibling
+        
+		 animateSecondStep(svgElement);
+	
+}
+
+function animateFirstStep(svgElem){
+    d3.select(svgElem)
+      .transition()
+      .attr("d",arc)
+    .text( function(d, i) {	
+    return d.data.mimeType+"\t["+d.data.value+"]"  ;
+	
+	})
+     .style("fill", "blue")
+	 .style("display","inline") 
+	 
+	 ;
+	
+      /*     .attr("d", arc2)
+        .style("fill", "black"); */
+
+       /*  .style("stroke", "black")
+        .style("stroke-width", 1);   */
+		//d.outerRadius=r+20;
+	
+}
+
+function animateSecondStep(svgElem){
+
+    d3.select(svgElem)
+      .transition()
+      .ease("elastic")
+      .duration(1000)
+        .attr("d", arc)
+        .style("fill", function(d,i) { return "black" ; })
+        .text( function(d, i) {		
+    return d.data.mimeType;
+    }).style("display","inline") 
+	
+	;
+       /* .style("stroke", "white")
+        .style("stroke-width", 0); */
+		//d.outerRadius=r-20;
+		
+};
+
+
+                });
+    </script>
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="detail"></div>
+        <div id="chart" width="200px"></div>
+
+    </div>
+</body>
+</html>

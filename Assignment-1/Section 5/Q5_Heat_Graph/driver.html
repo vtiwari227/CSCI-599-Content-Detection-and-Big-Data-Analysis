@@ -1,0 +1,294 @@
+
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  font: 10px sans-serif;
+}
+	
+	h2{
+		text-align: center;
+	}
+	select {
+		text-align: center;
+		align-content: center;
+		left: 600px;
+		position: absolute;
+	}
+
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+	.tooltip {
+  position: absolute;
+  width: 200px;
+  height: 28px;
+  pointer-events: none;
+}
+
+.dot {
+  stroke: #000;
+}
+
+</style>
+<body>
+<script src='http://d3js.org/d3.v3.min.js'></script>
+	<form>
+			<h2>FHT Visualization for MIME Taxanomy for Q5</h2>
+<select name="selectList" class="list1" required onchange="scriptRun()" style="align:center" >
+	<option value="selected" selected>select a mime type
+<option value=datazip.json>zip
+<option value=datapng.json>PNG
+<option value=datagzip.json>gzip
+	<option value=dataatom.json>atom
+		<option value=datahtml.json>html
+			<option value=datajpeg.json>jpeg
+				<option value=dataplain.json>plain
+					<option value=datarss.json>rss
+						<option value=datatika.json>tika office
+							<option value=dataxsh.json>xsh
+								<option value=datagif.json>gif
+									<option value=dataoctect.json>octect
+										<option value=datapdf.json>pdf
+											<option value=dataxhtml.json>xhtml
+												<option value=dataxml.json>xml
+</select>
+	</form>
+	
+<script>
+function scriptRun(){
+  d3.select("svg").remove();
+
+var margin = {top: 100, right: 50, bottom:50, left: 150},
+    padding =150;
+    width = 1400 - margin.left - margin.right-padding,
+    height = 800 - margin.top - margin.bottom -padding;
+    
+var x = d3.scale.linear()
+    .range([0, width-100]);
+
+var y = d3.scale.linear()
+    .range([0,height -100]);
+
+ var color = d3.scale.ordinal()
+      .domain(["<= 0.1", "<= 0.2", "<= 0.3","<= 0.4", "<= 0.5", "<= 0.6","<= 0.7", "<= 0.8", "<= 0.9","<=1"])
+      .range(["#9BF3DF", "#5EEFCD" , "#8EEBB6","#2EEF82", "#46F34C" , "#22EE29","#4AB61B", "#2E810A" , "#8ED11B","#61910D"]);
+	
+	var color1 = d3.scale.ordinal()
+      .domain(["<= 0.1", "<= 0.2", "<= 0.3","<= 0.4", "<= 0.5", "<= 0.6","<= 0.7", "<= 0.8", "<= 0.9","<=1"])
+      .range(["#F7A1A1", "#F56262" , "#F34242","#E60505", "#B6A0F2" , "#825BEE","#5F2FE4", "#240184" , "#0A0E73","#0D98E9"]);
+var    colorByteValue = ["#F7A1A1", "#F56262" , "#F34242","#E60505", "#B6A0F2" , "#825BEE","#5F2FE4", "#240184" , "#0A0E73","#0D98E9"];
+    var  colorFingerPrint =["#9BF3DF", "#5EEFCD" , "#8EEBB6","#2EEF82", "#46F34C" , "#22EE29","#4AB61B", "#2E810A" , "#8ED11B","#61910D"];
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("top");
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+  
+var svg = d3.select("body").append("svg")
+    .attr("width", width  + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+	
+
+	var tooltip = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+	
+  
+d3.json(document.forms[0].selectList.options[document.forms[0].selectList.selectedIndex].value, function(error, data1) {
+   var arr =[];
+	for(i=0; i<data1.length;i++){
+		arr.push(data1[i].output);
+	}
+	
+	type = data1[0].byte;
+	 y.domain([0,255]);
+   for(i=0; i<arr.length;i++){
+	   
+	   bitData =arr[i];
+ x.domain([bitData[0].bit, bitData[bitData.length - 1].bit]);
+
+   
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(" + 0 + ","+ -8 +")")
+      .call(xAxis)   
+    .append("text")
+      .attr("class", "label")
+      .style("text-anchor", "end")
+      .attr("transform", "translate("+ (width/2) +","+(height-50)+")")  
+      .text("Corelation strength");
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .attr("transform", "translate(" + -8+ ",0)")
+      .call(yAxis)
+    .append("text")
+    .attr("dy", ".71em")
+      .style("text-anchor", "end")
+       .attr("transform", "translate("+ -50 +","+(height/2)+")rotate(-90)") 
+      .text("bit Frequency");
+
+
+  svg.selectAll(".dot")
+      .data(bitData)
+	.enter().append("circle")
+      .attr("r", 3)
+	  .style("fill", function (d) { 
+	  
+	  if(d.bit <i){
+	  	
+          if(d.frequency <0.1){
+			return colorByteValue[0];
+		}
+	  else if (d.frequency >0.1 && d.frequency <0.2){
+		  return colorByteValue[1];
+	  }
+	  else if (d.frequency >0.2 && d.frequency <0.3){
+		  return colorByteValue[2];
+	  }
+	  else if (d.frequency >0.3 && d.frequency <0.4){
+		  return colorByteValue[3];
+	  }
+	  else if (d.frequency >0.4 && d.frequency <0.5){
+		  return colorByteValue[4];
+	  }
+	  else if (d.frequency >0.5 && d.frequency <0.6){
+		  return colorByteValue[5];
+	  }
+	   else if (d.frequency >0.6 && d.frequency <0.7){
+		  return colorByteValue[6];
+	  }
+	  else if (d.frequency >0.7 && d.frequency <0.8){
+		  return colorByteValue[7];
+	  }
+	  else if (d.frequency >0.8 && d.frequency <=0.9){
+		  return colorByteValue[8];
+	  }
+	  else {
+		 return colorByteValue[9];
+	  }}
+      else if(d.bit ==i){
+          return ("000000");
+      }
+	  
+  	  else {
+		
+          if(d.frequency <0.1){
+			return colorFingerPrint[0];
+		}
+	  else if (d.frequency >0.1 && d.frequency <0.2){
+		  return colorFingerPrint[1];
+	  }
+	  else if (d.frequency >0.2 && d.frequency <0.3){
+		  return colorFingerPrint[2];
+	  }
+	  else if (d.frequency >0.3 && d.frequency <0.4){
+		  return colorFingerPrint[3];
+	  }
+	  else if (d.frequency >0.4 && d.frequency <0.5){
+		  return colorFingerPrint[4];
+	  }
+	  else if (d.frequency >0.5 && d.frequency <0.6){
+		  return colorFingerPrint[5];
+	  }
+	   else if (d.frequency >0.6 && d.frequency <0.7){
+		  return colorFingerPrint[6];
+	  }
+	  else if (d.frequency >0.7 && d.frequency <0.8){
+		  return colorFingerPrint[7];
+	  }
+	  else if (d.frequency >0.8 && d.frequency <=0.9){
+		  return colorFingerPrint[8];
+	  }
+	  else {
+		 return colorFingerPrint[9];
+	  }
+	  }
+  
+  
+  })
+	  .attr("cx", function(d) { return x(d.bit); })
+      .attr("cy", function(d) { return y(i); })
+	  .on("mouseover", function(d) {
+          tooltip.transition()
+               .duration(200)
+               .style("opacity", .9);
+          tooltip.html("bit-Frequency" + "<br/> ( "+  d.bit
+	        + ", " + d.frequency + ")")
+               .style("left", (d3.event.pageX + 5) + "px")
+               .style("top", (d3.event.pageY - 28) + "px");
+      })
+      .on("mouseout", function(d) {
+          tooltip.transition()
+               .duration(500)
+               .style("opacity", 0);
+      });
+ 	   
+     
+ 
+  
+  }
+	
+      
+});
+	var legend = svg.selectAll(".legend")
+      .data(color.domain())
+    .enter().append("g"	)
+      .attr("class", "legend")
+      .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+  // draw legend colored rectangles
+  legend.append("rect")
+      .attr("x", width )
+      .attr("width", 18)
+      .attr("height", 18)
+      .style("fill", color);
+
+  // draw legend text
+  legend.append("text")
+      .attr("x", width - 24)
+      .attr("y", 9)
+      .attr("dy", ".35em")
+      .style("text-anchor", "end")
+      .text(function(d) { 
+        return d;
+    })
+  var legend1 = svg.selectAll(".legend1")
+      .data(color1.domain())
+    .enter().append("g"	)
+      .attr("class", "legend1")
+      .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+  // draw legend colored rectangles
+  legend1.append("rect")
+    
+      .attr("x", -90)
+      .attr("y", 200)
+      .attr("width", 18)
+      .attr("height", 18)
+   	  .style("fill", color1);
+
+  // draw legend text
+  legend1.append("text")
+      .attr("x", -100)
+      .attr("y", 200)
+      .attr("dy", ".35em")
+      .style("text-anchor", "end")
+      .text(function(d) { 
+        return d;
+    })
+  
+	
+  
+}
+</script>

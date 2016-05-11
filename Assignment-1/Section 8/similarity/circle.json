@@ -1,0 +1,1084 @@
+{
+    "children": [
+        {
+            "children": [
+                {
+                    "name": "access_permission:can_modify",
+                    "size": 1
+                },
+                {
+                    "name": "access_permission:extract_content",
+                    "size": 1
+                },
+                {
+                    "name": "producer",
+                    "size": 1
+                },
+                {
+                    "name": "cp:subject",
+                    "size": 1
+                },
+                {
+                    "name": "dc:title",
+                    "size": 1
+                },
+                {
+                    "name": "meta:save-date",
+                    "size": 1
+                },
+                {
+                    "name": "Last-Modified",
+                    "size": 1
+                },
+                {
+                    "name": "access_permission:can_print",
+                    "size": 1
+                },
+                {
+                    "name": "resourceName",
+                    "size": 1
+                },
+                {
+                    "name": "meta:author",
+                    "size": 1
+                },
+                {
+                    "name": "subject",
+                    "size": 1
+                },
+                {
+                    "name": "access_permission:extract_for_accessibility",
+                    "size": 1
+                },
+                {
+                    "name": "access_permission:fill_in_form",
+                    "size": 1
+                },
+                {
+                    "name": "pdf:encrypted",
+                    "size": 1
+                },
+                {
+                    "name": "creator",
+                    "size": 1
+                },
+                {
+                    "name": "dc:format",
+                    "size": 1
+                },
+                {
+                    "name": "access_permission:can_print_degraded",
+                    "size": 1
+                },
+                {
+                    "name": "X-Parsed-By",
+                    "size": 1
+                },
+                {
+                    "name": "access_permission:assemble_document",
+                    "size": 1
+                },
+                {
+                    "name": "Author",
+                    "size": 1
+                },
+                {
+                    "name": "Last-Save-Date",
+                    "size": 1
+                },
+                {
+                    "name": "X-TIKA:parse_time_millis",
+                    "size": 1
+                },
+                {
+                    "name": "date",
+                    "size": 1
+                },
+                {
+                    "name": "dc:creator",
+                    "size": 1
+                },
+                {
+                    "name": "modified",
+                    "size": 1
+                },
+                {
+                    "name": "access_permission:modify_annotations",
+                    "size": 1
+                },
+                {
+                    "name": "pdf:PDFVersion",
+                    "size": 1
+                },
+                {
+                    "name": "xmpTPg:NPages",
+                    "size": 1
+                },
+                {
+                    "name": "title",
+                    "size": 1
+                },
+                {
+                    "name": "dcterms:modified",
+                    "size": 1
+                },
+                {
+                    "name": "Content-Type",
+                    "size": 1
+                }
+            ],
+            "name": "cluster0"
+        },
+        {
+            "children": [
+                {
+                    "name": "dc:title",
+                    "size": 8
+                },
+                {
+                    "name": "DC.Type",
+                    "size": 1
+                },
+                {
+                    "name": "DC.Date",
+                    "size": 1
+                },
+                {
+                    "name": "resourceName",
+                    "size": 53
+                },
+                {
+                    "name": "X-Parsed-By",
+                    "size": 53
+                },
+                {
+                    "name": "DC.Date.X-MetadataLastModified",
+                    "size": 1
+                },
+                {
+                    "name": "title",
+                    "size": 8
+                },
+                {
+                    "name": "DC.Format",
+                    "size": 1
+                },
+                {
+                    "name": "DC.Publisher",
+                    "size": 1
+                },
+                {
+                    "name": "DC.Publisher.Address",
+                    "size": 1
+                },
+                {
+                    "name": "thumbnail",
+                    "size": 1
+                },
+                {
+                    "name": "DC.Description",
+                    "size": 1
+                },
+                {
+                    "name": "rno",
+                    "size": 3
+                },
+                {
+                    "name": "description",
+                    "size": 5
+                },
+                {
+                    "name": "DC.Identifier",
+                    "size": 1
+                },
+                {
+                    "name": "Content-Type-Hint",
+                    "size": 7
+                },
+                {
+                    "name": "X-TIKA:parse_time_millis",
+                    "size": 53
+                },
+                {
+                    "name": "DC.Subject",
+                    "size": 1
+                },
+                {
+                    "name": "webmaster",
+                    "size": 3
+                },
+                {
+                    "name": "viewport",
+                    "size": 3
+                },
+                {
+                    "name": "Content-Encoding",
+                    "size": 8
+                },
+                {
+                    "name": "orgcode",
+                    "size": 3
+                },
+                {
+                    "name": "content-owner",
+                    "size": 3
+                },
+                {
+                    "name": "Content-Type",
+                    "size": 53
+                },
+                {
+                    "name": "DC.Language",
+                    "size": 1
+                },
+                {
+                    "name": "DC.Title",
+                    "size": 1
+                },
+                {
+                    "name": "Number of Components",
+                    "size": 5
+                },
+                {
+                    "name": "Image Width",
+                    "size": 5
+                },
+                {
+                    "name": "tiff:ImageLength",
+                    "size": 45
+                },
+                {
+                    "name": "Resolution Units",
+                    "size": 4
+                },
+                {
+                    "name": "tiff:BitsPerSample",
+                    "size": 5
+                },
+                {
+                    "name": "Color Transform",
+                    "size": 3
+                },
+                {
+                    "name": "Flags 0",
+                    "size": 3
+                },
+                {
+                    "name": "Flags 1",
+                    "size": 3
+                },
+                {
+                    "name": "Data Precision",
+                    "size": 5
+                },
+                {
+                    "name": "Component 2",
+                    "size": 5
+                },
+                {
+                    "name": "Component 3",
+                    "size": 5
+                },
+                {
+                    "name": "Component 1",
+                    "size": 5
+                },
+                {
+                    "name": "DCT Encode Version",
+                    "size": 3
+                },
+                {
+                    "name": "File Size",
+                    "size": 5
+                },
+                {
+                    "name": "X Resolution",
+                    "size": 4
+                },
+                {
+                    "name": "Image Height",
+                    "size": 5
+                },
+                {
+                    "name": "File Modified Date",
+                    "size": 5
+                },
+                {
+                    "name": "File Name",
+                    "size": 5
+                },
+                {
+                    "name": "Y Resolution",
+                    "size": 4
+                },
+                {
+                    "name": "tiff:ImageWidth",
+                    "size": 45
+                },
+                {
+                    "name": "Compression Type",
+                    "size": 5
+                },
+                {
+                    "name": "DC.language",
+                    "size": 1
+                },
+                {
+                    "name": "DC.title",
+                    "size": 1
+                },
+                {
+                    "name": "Expires",
+                    "size": 2
+                },
+                {
+                    "name": "DC.type",
+                    "size": 1
+                },
+                {
+                    "name": "DC.publisher.address",
+                    "size": 1
+                },
+                {
+                    "name": "Pragma",
+                    "size": 2
+                },
+                {
+                    "name": "DC.format",
+                    "size": 1
+                },
+                {
+                    "name": "DC.publisher",
+                    "size": 1
+                },
+                {
+                    "name": "DC.creator",
+                    "size": 1
+                },
+                {
+                    "name": "DC.description",
+                    "size": 1
+                },
+                {
+                    "name": "DC.subject",
+                    "size": 1
+                },
+                {
+                    "name": "twitter:image",
+                    "size": 1
+                },
+                {
+                    "name": "twitter:site",
+                    "size": 1
+                },
+                {
+                    "name": "og:url",
+                    "size": 2
+                },
+                {
+                    "name": "og:title",
+                    "size": 2
+                },
+                {
+                    "name": "generator",
+                    "size": 1
+                },
+                {
+                    "name": "og:type",
+                    "size": 2
+                },
+                {
+                    "name": "article:modified_time",
+                    "size": 1
+                },
+                {
+                    "name": "article:author",
+                    "size": 1
+                },
+                {
+                    "name": "og:image",
+                    "size": 2
+                },
+                {
+                    "name": "article:published_time",
+                    "size": 1
+                },
+                {
+                    "name": "og:site_name",
+                    "size": 1
+                },
+                {
+                    "name": "twitter:card",
+                    "size": 1
+                },
+                {
+                    "name": "og:description",
+                    "size": 1
+                },
+                {
+                    "name": "XMP Value Count",
+                    "size": 1
+                },
+                {
+                    "name": "dc.publisher",
+                    "size": 1
+                },
+                {
+                    "name": "dc.description",
+                    "size": 2
+                },
+                {
+                    "name": "copyright",
+                    "size": 1
+                },
+                {
+                    "name": "author",
+                    "size": 1
+                },
+                {
+                    "name": "dc.rights",
+                    "size": 1
+                },
+                {
+                    "name": "dc.format",
+                    "size": 2
+                },
+                {
+                    "name": "ROBOTS",
+                    "size": 2
+                },
+                {
+                    "name": "date",
+                    "size": 1
+                },
+                {
+                    "name": "dc.language",
+                    "size": 2
+                },
+                {
+                    "name": "dc.title",
+                    "size": 2
+                },
+                {
+                    "name": "dc.type",
+                    "size": 1
+                },
+                {
+                    "name": "dc.date",
+                    "size": 1
+                },
+                {
+                    "name": "dc.creator",
+                    "size": 1
+                },
+                {
+                    "name": "COPYRIGHT",
+                    "size": 1
+                },
+                {
+                    "name": "REVISIT-AFTER",
+                    "size": 1
+                },
+                {
+                    "name": "PAGE-ENTER",
+                    "size": 1
+                },
+                {
+                    "name": "KEYWORDS",
+                    "size": 1
+                },
+                {
+                    "name": "Content-Style-Type",
+                    "size": 1
+                },
+                {
+                    "name": "GENERATOR",
+                    "size": 1
+                },
+                {
+                    "name": "AUTHOR",
+                    "size": 1
+                },
+                {
+                    "name": "RATING",
+                    "size": 1
+                },
+                {
+                    "name": "Content-Script-Type",
+                    "size": 1
+                },
+                {
+                    "name": "RESOURCE-TYPE",
+                    "size": 1
+                },
+                {
+                    "name": "DESCRIPTION",
+                    "size": 1
+                },
+                {
+                    "name": "X-UA-Compatible",
+                    "size": 3
+                },
+                {
+                    "name": "DISTRIBUTION",
+                    "size": 1
+                },
+                {
+                    "name": "Chroma ColorSpaceType",
+                    "size": 40
+                },
+                {
+                    "name": "Chroma BlackIsZero",
+                    "size": 40
+                },
+                {
+                    "name": "Chroma NumChannels",
+                    "size": 40
+                },
+                {
+                    "name": "Transparency TransparentIndex",
+                    "size": 13
+                },
+                {
+                    "name": "ImageDescriptor",
+                    "size": 40
+                },
+                {
+                    "name": "Compression Lossless",
+                    "size": 40
+                },
+                {
+                    "name": "Dimension VerticalPixelOffset",
+                    "size": 40
+                },
+                {
+                    "name": "height",
+                    "size": 40
+                },
+                {
+                    "name": "width",
+                    "size": 40
+                },
+                {
+                    "name": "Dimension ImageOrientation",
+                    "size": 40
+                },
+                {
+                    "name": "Compression NumProgressiveScans",
+                    "size": 40
+                },
+                {
+                    "name": "Data SampleFormat",
+                    "size": 40
+                },
+                {
+                    "name": "Dimension HorizontalPixelOffset",
+                    "size": 40
+                },
+                {
+                    "name": "GraphicControlExtension",
+                    "size": 40
+                },
+                {
+                    "name": "Compression CompressionTypeName",
+                    "size": 40
+                },
+                {
+                    "name": "robots",
+                    "size": 2
+                },
+                {
+                    "name": "google-site-verification",
+                    "size": 1
+                },
+                {
+                    "name": "Cache-Control",
+                    "size": 1
+                },
+                {
+                    "name": "keywords",
+                    "size": 1
+                },
+                {
+                    "name": "citation_language",
+                    "size": 1
+                },
+                {
+                    "name": "citation_publication_date",
+                    "size": 1
+                },
+                {
+                    "name": "citation_abstract_html_url",
+                    "size": 1
+                },
+                {
+                    "name": "citation_issn",
+                    "size": 1
+                },
+                {
+                    "name": "citation_journal_title",
+                    "size": 1
+                },
+                {
+                    "name": "citation_title",
+                    "size": 1
+                },
+                {
+                    "name": "citation_author_institution",
+                    "size": 1
+                },
+                {
+                    "name": "citation_author",
+                    "size": 1
+                },
+                {
+                    "name": "citation_doi",
+                    "size": 1
+                },
+                {
+                    "name": "article_references",
+                    "size": 1
+                },
+                {
+                    "name": "citation_pdf_url",
+                    "size": 1
+                },
+                {
+                    "name": "dc.subject.discipline",
+                    "size": 1
+                },
+                {
+                    "name": "dc.audience",
+                    "size": 1
+                },
+                {
+                    "name": "dc.identifier",
+                    "size": 1
+                },
+                {
+                    "name": "dc.date.modified",
+                    "size": 1
+                }
+            ],
+            "name": "cluster1"
+        },
+        {
+            "children": [
+                {
+                    "name": "dc.description",
+                    "size": 1
+                },
+                {
+                    "name": "dc.format",
+                    "size": 2
+                },
+                {
+                    "name": "dc.language",
+                    "size": 2
+                },
+                {
+                    "name": "title",
+                    "size": 143
+                },
+                {
+                    "name": "dc:title",
+                    "size": 143
+                },
+                {
+                    "name": "dc.contributor",
+                    "size": 1
+                },
+                {
+                    "name": "dc.publisher",
+                    "size": 2
+                },
+                {
+                    "name": "dc.audience",
+                    "size": 2
+                },
+                {
+                    "name": "Content-Type-Hint",
+                    "size": 67
+                },
+                {
+                    "name": "X-Parsed-By",
+                    "size": 744
+                },
+                {
+                    "name": "dc.identifier",
+                    "size": 1
+                },
+                {
+                    "name": "X-TIKA:parse_time_millis",
+                    "size": 744
+                },
+                {
+                    "name": "resourceName",
+                    "size": 744
+                },
+                {
+                    "name": "dc.date.modified",
+                    "size": 1
+                },
+                {
+                    "name": "dc.subject",
+                    "size": 1
+                },
+                {
+                    "name": "Content-Type",
+                    "size": 744
+                },
+                {
+                    "name": "Content-Encoding",
+                    "size": 297
+                },
+                {
+                    "name": "dc.title",
+                    "size": 1
+                },
+                {
+                    "name": "twitter:site",
+                    "size": 1
+                },
+                {
+                    "name": "description",
+                    "size": 67
+                },
+                {
+                    "name": "csrf-token",
+                    "size": 1
+                },
+                {
+                    "name": "twitter:description",
+                    "size": 1
+                },
+                {
+                    "name": "HandheldFriendly",
+                    "size": 4
+                },
+                {
+                    "name": "csrf-param",
+                    "size": 1
+                },
+                {
+                    "name": "keywords",
+                    "size": 19
+                },
+                {
+                    "name": "MobileOptimized",
+                    "size": 4
+                },
+                {
+                    "name": "twitter:card",
+                    "size": 1
+                },
+                {
+                    "name": "twitter:title",
+                    "size": 1
+                },
+                {
+                    "name": "viewport",
+                    "size": 13
+                },
+                {
+                    "name": "og:url",
+                    "size": 2
+                },
+                {
+                    "name": "generator",
+                    "size": 11
+                },
+                {
+                    "name": "og:type",
+                    "size": 3
+                },
+                {
+                    "name": "robots",
+                    "size": 8
+                },
+                {
+                    "name": "p:domain_verify",
+                    "size": 1
+                },
+                {
+                    "name": "X-UA-Compatible",
+                    "size": 12
+                },
+                {
+                    "name": "google-site-verification",
+                    "size": 6
+                },
+                {
+                    "name": "og:title",
+                    "size": 2
+                },
+                {
+                    "name": "copyright",
+                    "size": 3
+                },
+                {
+                    "name": "refresh",
+                    "size": 1
+                },
+                {
+                    "name": "author",
+                    "size": 10
+                },
+                {
+                    "name": "GOOGLEBOT",
+                    "size": 1
+                },
+                {
+                    "name": "og:description",
+                    "size": 2
+                },
+                {
+                    "name": "og:site_name",
+                    "size": 2
+                },
+                {
+                    "name": "expires",
+                    "size": 1
+                },
+                {
+                    "name": "Content-Language",
+                    "size": 2
+                },
+                {
+                    "name": "doc-class",
+                    "size": 1
+                },
+                {
+                    "name": "imagetoolbar",
+                    "size": 4
+                },
+                {
+                    "name": "ROBOTS",
+                    "size": 2
+                },
+                {
+                    "name": "MSSmartTagsPreventParsing",
+                    "size": 1
+                },
+                {
+                    "name": "access_permission:can_modify",
+                    "size": 54
+                },
+                {
+                    "name": "access_permission:extract_content",
+                    "size": 54
+                },
+                {
+                    "name": "access_permission:assemble_document",
+                    "size": 54
+                },
+                {
+                    "name": "access_permission:extract_for_accessibility",
+                    "size": 54
+                },
+                {
+                    "name": "access_permission:fill_in_form",
+                    "size": 54
+                },
+                {
+                    "name": "pdf:encrypted",
+                    "size": 54
+                },
+                {
+                    "name": "access_permission:can_print",
+                    "size": 54
+                },
+                {
+                    "name": "dc:format",
+                    "size": 54
+                },
+                {
+                    "name": "access_permission:can_print_degraded",
+                    "size": 54
+                },
+                {
+                    "name": "access_permission:modify_annotations",
+                    "size": 54
+                },
+                {
+                    "name": "pdf:PDFVersion",
+                    "size": 54
+                },
+                {
+                    "name": "xmpTPg:NPages",
+                    "size": 54
+                },
+                {
+                    "name": "DC.description",
+                    "size": 3
+                },
+                {
+                    "name": "language",
+                    "size": 2
+                },
+                {
+                    "name": "DC.date.reviewed",
+                    "size": 4
+                },
+                {
+                    "name": "DC.creator",
+                    "size": 4
+                },
+                {
+                    "name": "DC.date.created",
+                    "size": 3
+                },
+                {
+                    "name": "DC.title",
+                    "size": 3
+                },
+                {
+                    "name": "DC.language",
+                    "size": 3
+                },
+                {
+                    "name": "DC.format",
+                    "size": 1
+                },
+                {
+                    "name": "DC.subject",
+                    "size": 1
+                },
+                {
+                    "name": "revised",
+                    "size": 1
+                },
+                {
+                    "name": "template",
+                    "size": 1
+                },
+                {
+                    "name": "rating",
+                    "size": 1
+                },
+                {
+                    "name": "y_key",
+                    "size": 1
+                },
+                {
+                    "name": "PICS-Label",
+                    "size": 1
+                },
+                {
+                    "name": "date",
+                    "size": 3
+                },
+                {
+                    "name": "cleartype",
+                    "size": 3
+                },
+                {
+                    "name": "Generator",
+                    "size": 8
+                },
+                {
+                    "name": "og:image",
+                    "size": 1
+                },
+                {
+                    "name": "fb:app_id",
+                    "size": 1
+                },
+                {
+                    "name": "fb:admins",
+                    "size": 1
+                },
+                {
+                    "name": "last-modified",
+                    "size": 1
+                },
+                {
+                    "name": "Content-Location",
+                    "size": 2
+                },
+                {
+                    "name": "status",
+                    "size": 1
+                },
+                {
+                    "name": "modified",
+                    "size": 1
+                },
+                {
+                    "name": "created",
+                    "size": 1
+                },
+                {
+                    "name": "type",
+                    "size": 1
+                },
+                {
+                    "name": "dc.creator",
+                    "size": 1
+                },
+                {
+                    "name": "Description",
+                    "size": 1
+                },
+                {
+                    "name": "Author",
+                    "size": 1
+                },
+                {
+                    "name": "Keywords",
+                    "size": 1
+                },
+                {
+                    "name": "Content-Style-Type",
+                    "size": 2
+                },
+                {
+                    "name": "content-language",
+                    "size": 1
+                },
+                {
+                    "name": "sioc:num_replies",
+                    "size": 1
+                },
+                {
+                    "name": "fragment",
+                    "size": 1
+                },
+                {
+                    "name": "Content-language",
+                    "size": 1
+                },
+                {
+                    "name": "Content-Script-Type",
+                    "size": 1
+                },
+                {
+                    "name": "Pragma",
+                    "size": 11
+                },
+                {
+                    "name": "x-ua-compatible",
+                    "size": 10
+                },
+                {
+                    "name": "ResourceLoaderDynamicStyles",
+                    "size": 3
+                },
+                {
+                    "name": "dc:description",
+                    "size": 47
+                },
+                {
+                    "name": "X-TIKA:embedded_resource_path",
+                    "size": 395
+                },
+                {
+                    "name": "X-TIKA:EXCEPTION:embedded_exception",
+                    "size": 326
+                }
+            ],
+            "name": "cluster2"
+        }
+    ],
+    "name": "clusters"
+}

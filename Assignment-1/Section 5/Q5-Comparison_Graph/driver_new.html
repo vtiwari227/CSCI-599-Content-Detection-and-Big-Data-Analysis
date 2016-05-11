@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+    h2{
+		text-align: center;
+	}
+	select {
+		text-align: center;
+		align-content: center;
+		left: 600px;
+		position: fixed;
+	}
+
+
+
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+	
+	.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.focus circle {
+  fill: none;
+  stroke: steelblue;
+}
+}
+
+</style>
+<body>
+<script src='http://d3js.org/d3.v3.min.js'></script>
+    
+    	<form>
+			<h2>FHT Visualization for MIME Taxanomy for Q6</h2>
+<select name="selectList" class="list1" required onchange="scriptRun()" style="align:center" >
+	<option value="selected" selected>select a mime type
+<option value=data_zip.json>zip
+<option value=data_png.json>PNG
+<option value=data_gzip.json>gzip
+	<option value=data_atom.json>atom
+		<option value=data_html.json>html
+			<option value=data_jpeg.json>jpeg
+				<option value=data_plain.json>plain
+					<option value=data_rss.json>rss
+						<option value=data_tika.json>tika office
+							<option value=data_xsh.json>xsh
+								<option value=data_gif.json>gif
+									<option value=data_octect.json>octect
+										<option value=data_pdf.json>pdf
+											<option value=data_xhtml.json>xhtml
+												<option value=data_xml.json>xml
+</select>
+	</form>
+
+<script>
+function scriptRun(){
+  d3.select("svg").remove();
+
+
+var margin = {top: 20, right: 20, bottom: 30, left: 50},
+    width = 1300 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+bisectDate = d3.bisector(function(d) { return d.byte; }).left;
+ formatValue = d3.format(",.2f");
+
+var x = d3.time.scale()
+    .range([0, width]);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+	.tickFormat(d3.format("d"))
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+
+var color = d3.scale.category20c();
+
+var line = d3.svg.line()
+    .x(function(d) { return x(d.byte); })
+    .y(function(d) { return y(d.frequency); });
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+d3.json(document.forms[0].selectList.options[document.forms[0].selectList.selectedIndex].value, function(error, data) {
+   var arr =[];
+	arr.push(data[0].output);
+	arr.push(data[1].output);
+	type = data[0].mimetype;
+   for(i=0; i<arr.length;i++){
+	   byte =arr[i];
+ x.domain([byte[0].byte, byte[byte.length - 1].byte]);
+  y.domain(d3.extent(byte, function(d) { return d.frequency; }));
+   
+	  
+  if(i==0){
+	  
+ 
+  svg.append("path")
+      .datum(byte)
+      .attr("class", "line")
+  	  .style("stroke","#FF0000")
+	  .attr("d", line);	
+  	  
+  }
+	   else {
+   svg.append("path")
+      .datum(byte)
+      .attr("class", "line")
+	  .attr("d", line);	
+	   }
+	
+	  var focus = svg.append("g")
+      .attr("class", "focus")
+      .style("display", "none");
+
+  focus.append("circle")
+      .attr("r", 4.5);
+
+  focus.append("text")
+      .attr("x", 9)
+      .attr("dy", ".35em");
+
+  svg.append("rect")
+      .attr("class", "overlay")
+      .attr("width", width)
+      .attr("height", height)
+      .on("mouseover", function() { focus.style("display", null); })
+      .on("mouseout", function() { focus.style("display", "none"); })
+      .on("mousemove", mousemove);
+	  
+	svg.append("text")
+        .attr("x", (width / 2))             
+        .attr("y", 20 - (margin.top / 2))
+        .attr("text-anchor", "middle")  
+        .style("font-size", "16px") 
+        .style("text-decoration", "underline")  
+		
+        .text(type);
+	   
+	   
+
+  function mousemove() {
+    var x0 = x.invert(d3.mouse(this)[0]),
+        i = bisectDate(byte, x0, 1),
+        d0 = byte[i - 1],
+        d1 = byte[i],
+        d = x0 - d0.byte > d1.byte - x0 ? d1 : d0;
+    focus.attr("transform", "translate(" + x(d.byte) + "," + y(d.frequency) + ")");
+    focus.select("text").text((d.byte+"--->" +d.frequency));
+  }
+   }
+	
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis);
+	
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+    .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("value");
+
+});
+	
+}
+
+</script>
