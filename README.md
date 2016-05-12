@@ -22,7 +22,10 @@ Big Data present in the TREC-DD-Polar dataset. [read more here](http://sunset.us
  
  
  
- Assignment-3 (Evaluating the content Analysis on TREC polar dataset)
+ 
+ 
+ 
+ ##Assignment-3 (Evaluating the content Analysis on TREC polar dataset)
  -----------------------------------------------------------------------
 To expand the analysis of the TREC-DD-Polar Dataset.Evaluating the efficacy, utility, and overall contribution of your Content detection approach is an extremely important and difficult challenge. Questions such as Is my MIME detection good? Are my parsers extracting the right text? Are we selecting the right parser? Is my Metadata appropriate? What’s missing? How well is my language detection performing? Are there mixed languages? How well is my Machine Translation? Do my Named
 Entities make sense? [read more here](http://sunset.usc.edu/classes/cs599_2016/CS599_HW_EVAL_POLAR.pdf)
