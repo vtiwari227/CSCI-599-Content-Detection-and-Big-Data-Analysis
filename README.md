@@ -13,13 +13,20 @@ Big Data present in the TREC-DD-Polar dataset. [read more here](http://sunset.us
  [Demo for MIME Divesity for various MIME type-BFA approach](http://www-scf.usc.edu/~vtiwari/BDA/D3/BDA_HW1/Q4/driver.html)
  
  
- [Demo for MIME Divesity for various MIME type-BFC approach](http://www-scf.usc.edu/~vtiwari/BDA/D3/BDA_HW1/Q5/Q5/driver.html)
+ [Demo for MIME Divesity for various MIME type-BFC approach](http://www-scf.usc.edu/~vtiwari/BDA/D3/BDA_HW1/Q5_Heat_Graph/driver.html)
  
  [Demo for MIME Divesity for various MIME type-FHT approach](http://www-scf.usc.edu/~vtiwari/BDA/D3/BDA_HW1/Q6_16/driver.html)
  
  
 
- 
+Assignment-2(Scientific Content Enrichment for TREC polar dataset)
+----------------------------------------------------------------------
+To significantly enrich the metadata, and automatically extracted text and entities from the TREC Polar Dataset, and to make the dataset easily to relate to and to interact with. To do so, you will apply and leverage knowledge gained
+from context extraction, metadata, information similarity and clustering, and from the named entity recognition lectures.
+[read more]()
+
+[Demo for Scientific Content Enrichment for TREC polar dataset ](http://www-scf.usc.edu/~vtiwari/BDA/D3/BDA_HW2/)
+
  
  
  
